@@ -1,0 +1,43 @@
+﻿<ESRI.Configuration xmlns="http://schemas.esri.com/Desktop/AddIns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Name>AtencionPublico</Name>
+  <AddInID>{f66a11f6-1f6a-4f3f-a0be-d30dac21b5bd}</AddInID>
+  <Description>Aplicativo de atención al público</Description>
+  <Version>1.0</Version>
+  <Image>Images\AtencionPublico.png</Image>
+  <Author>jyupanqui</Author>
+  <Company></Company>
+  <Date>9/02/2022</Date>
+  <Targets>
+    <Target name="Desktop" version="10.4" />
+  </Targets>
+  <AddIn language="CLR" library="AtencionPublico.dll" namespace="AtencionPublico">
+    <ArcMap>
+      <DockableWindows>
+        <DockableWindow id="AtencionPublico_AtencionPublicodock" class="AtencionPublicodock+AddinImpl" caption="Atencion al público dockable" image="Images\AtencionPublicodock.png">
+          <InitialPlacement height="300" width="300" state="pinned" position="right" />
+        </DockableWindow>
+      </DockableWindows>
+      <Commands>
+        <Button id="AtencionPublico_OpenDockableWindow" class="OpenDockableWindow" message="Atención al público" caption="Atención al público" tip="Atención al público" category="Add-In Controls" image="Images\OpenDockableWindow_1.png" />
+        <Button id="AtencionPublico_btnUserGuide" class="btnUserGuide" message="Guía de usuario" caption="Guía de usuario" tip="Guía de usuario" category="Add-In Controls" image="Images\btnUserGuide.png" />
+        <Button id="AtencionPublico_btnAbout" class="btnAbout" message="En proceso" caption="About" tip="Acerca de" category="Add-In Controls" image="Images\btnAbout.png" />
+      </Commands>
+      <Menus>
+        <Menu id="AtencionPublico_Relacionados" caption="Relacionados" isRootMenu="false">
+          <Items>
+            <Button refID="AtencionPublico_btnUserGuide" />
+            <Button refID="AtencionPublico_btnAbout" />
+          </Items>
+        </Menu>
+      </Menus>
+      <Toolbars>
+        <Toolbar id="AtencionPublico_Atención_al_público" caption="Atención al público" showInitially="false">
+          <Items>
+            <Button refID="AtencionPublico_OpenDockableWindow" />
+            <Menu refID="AtencionPublico_Relacionados" />
+          </Items>
+        </Toolbar>
+      </Toolbars>
+    </ArcMap>
+  </AddIn>
+</ESRI.Configuration>
