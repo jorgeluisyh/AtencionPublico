@@ -32,6 +32,8 @@ namespace AtencionPublico
         public static string _path_sqlite = _scripts_path + @"\atencionpublico.db";
         public static string _path_loader = _image_path + @"\loader.gif";
 
+        public static string _grillas_path = _image_path + @"\grilla_cartas.gif";
+
         //3.Variables dinámicas alterables según fin
         // EStas variables solo podrán ser alteradas manejándolas dentro del contexto que fueron creados
         public static string user;

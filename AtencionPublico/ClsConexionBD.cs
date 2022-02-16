@@ -25,14 +25,7 @@ namespace AtencionPublico
         //        SqlDataAdapter da = new SqlDataAdapter(SQLstr_modulos, conn);
         //        da.SelectCommand.CommandType = System.Data.CommandType.Text;
         //        DataSet ds = new DataSet();
-
-        //        //SQLcmd.CommandText = SQLstr_modulos
-        //        //SQLdr = SQLcmd.ExecuteReader()
-        //        //modulosDict.Clear()
-        //        //While SQLdr.Read()
-        //        //    modulosDict.Add(SQLdr.GetValue(0), SQLdr.GetValue(1))
-        //        //End While
-        //        //SQLdr.Close()
+ 
 
         //        da.Fill(ds, "Modulos");
         //        for (int i = 0; i < ds.Tables[0].Rows.Count; i++)
@@ -88,16 +81,6 @@ namespace AtencionPublico
 
         }
 
-        public Dictionary<int, string> ObtenerCartasOracle()
-        {
-            Dictionary<int, string> diccionario_cartas = new Dictionary<int, string>();
-            string connectionString = "";
-            //OracleConnection conn = new OracleConnection(connectionString);
-
-
-
-            return diccionario_cartas;
-        }
     }
 
 }

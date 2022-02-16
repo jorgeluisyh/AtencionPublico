@@ -64,6 +64,7 @@ namespace AtencionPublico
             modulosDict = conexionBD.ObtenerModulossqlite();
             Form Modulosform = new Modulos();
             openFormByName(Modulosform, pnl_main);
+
         }
 
         private void AtencionPublicodock_Resize(object sender, EventArgs e)
