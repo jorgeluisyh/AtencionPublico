@@ -20,6 +20,8 @@ _IMG_LOGO_INGEMMET = os.path.join(_IMG_DIR, 'logo_ingemmet.png')
 _BDGEOCAT_NAME = 'bdgeocat_dev.sde' if __status__ == 'Development' else 'bdgeocat.sde'
 _BDGEOCAT_SDE = os.path.join(_BASE_DIR, _BDGEOCAT_NAME)
 # _BDGEOCAT_SDE_DEV = os.path.join(_BASE_DIR, 'bdgeocat_dev.sde')
+#Capas de BDGEOCAT
+_CARTA_NACIONAL_GEOWGS84 = os.path.join(_BDGEOCAT_SDE, 'DATA_GIS.DS_IGN_CARTA_NACIONAL_GEOWGS84')
 
 _ZONAS_GEOGRAFICAS = [17, 18, 19]
 _EPSG_W17S = 32717

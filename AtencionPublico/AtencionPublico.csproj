@@ -68,7 +68,9 @@
       <SpecificVersion>False</SpecificVersion>
     </Reference>
     <Reference Include="ESRI.ArcGIS.ArcMapUI, Version=10.4.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL">
-      <EmbedInteropTypes>True</EmbedInteropTypes>
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+      <Private>False</Private>
     </Reference>
     <Reference Include="ESRI.ArcGIS.Carto, Version=10.4.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86">
       <EmbedInteropTypes>True</EmbedInteropTypes>
@@ -83,7 +85,7 @@
       <Private>False</Private>
     </Reference>
     <Reference Include="ESRI.ArcGIS.Display, Version=10.4.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86">
-      <EmbedInteropTypes>True</EmbedInteropTypes>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
     </Reference>
     <Reference Include="ESRI.ArcGIS.Editor, Version=10.4.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
@@ -150,6 +152,7 @@
     <Compile Include="formPantallaGigante.designer.cs">
       <DependentUpon>formPantallaGigante.cs</DependentUpon>
     </Compile>
+    <Compile Include="GraficarPunto.cs" />
     <Compile Include="Modulos.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -208,6 +211,8 @@
   <ItemGroup>
     <AddInContent Include="Images\btnUserGuide.png" />
     <AddInContent Include="Images\btnAbout.png" />
+    <AddInContent Include="Images\GraficarPunto.png" />
+    <AddInContent Include="Images\GraficarPunto.cur" />
     <Content Include="Images\OpenDockableWindow.png" />
     <AddInContent Include="Images\OpenDockableWindow_1.png" />
     <Content Include="scripts\img\grilla_cartas.gif">
@@ -249,10 +254,22 @@
     <None Include="scripts\G_S01_obtenercartas.py">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
+    <None Include="scripts\G_S02_obtenerdistritos.py">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="scripts\G_S03_limpiarTOC.py">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="scripts\G_S04_obtenerdatosdm.py">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
     <None Include="scripts\packages_atpub_arc.py">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
     <None Include="scripts\PG_S01.py">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="scripts\PG_S01_graficarcarta.py">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
     <None Include="scripts\settings_atpub.py">
@@ -306,4 +323,8 @@
   </Target>
   <Import Project="..\packages\EntityFramework.6.4.4\build\EntityFramework.targets" Condition="Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.targets')" />
   <Import Project="..\packages\Stub.System.Data.SQLite.Core.NetFramework.1.0.115.5\build\net451\Stub.System.Data.SQLite.Core.NetFramework.targets" Condition="Exists('..\packages\Stub.System.Data.SQLite.Core.NetFramework.1.0.115.5\build\net451\Stub.System.Data.SQLite.Core.NetFramework.targets')" />
+  <PropertyGroup>
+    <PreBuildEvent>
+    </PreBuildEvent>
+  </PropertyGroup>
 </Project>

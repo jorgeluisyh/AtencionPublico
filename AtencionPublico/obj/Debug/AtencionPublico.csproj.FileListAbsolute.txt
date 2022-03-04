@@ -29,7 +29,6 @@ D:\jyupanqui\proyectos\AtencionPublico\AtencionPublico\AtencionPublico\bin\Debug
 D:\jyupanqui\proyectos\AtencionPublico\AtencionPublico\AtencionPublico\bin\Debug\ESRI.ArcGIS.GlobeCore.dll
 D:\jyupanqui\proyectos\AtencionPublico\AtencionPublico\AtencionPublico\bin\Debug\ESRI.ArcGIS.3DAnalyst.dll
 D:\jyupanqui\proyectos\AtencionPublico\AtencionPublico\AtencionPublico\bin\Debug\ESRI.ArcGIS.Animation.dll
-D:\jyupanqui\proyectos\AtencionPublico\AtencionPublico\AtencionPublico\bin\Debug\ESRI.ArcGIS.Output.dll
 D:\jyupanqui\proyectos\AtencionPublico\AtencionPublico\AtencionPublico\bin\Debug\EntityFramework.xml
 D:\jyupanqui\proyectos\AtencionPublico\AtencionPublico\AtencionPublico\bin\Debug\EntityFramework.SqlServer.xml
 D:\jyupanqui\proyectos\AtencionPublico\AtencionPublico\AtencionPublico\bin\Debug\ESRI.ArcGIS.ADF.Local.xml
@@ -44,7 +43,7 @@ D:\jyupanqui\proyectos\AtencionPublico\AtencionPublico\AtencionPublico\bin\Debug
 D:\jyupanqui\proyectos\AtencionPublico\AtencionPublico\AtencionPublico\bin\Debug\ESRI.ArcGIS.GlobeCore.xml
 D:\jyupanqui\proyectos\AtencionPublico\AtencionPublico\AtencionPublico\bin\Debug\ESRI.ArcGIS.3DAnalyst.xml
 D:\jyupanqui\proyectos\AtencionPublico\AtencionPublico\AtencionPublico\bin\Debug\ESRI.ArcGIS.Animation.xml
-D:\jyupanqui\proyectos\AtencionPublico\AtencionPublico\AtencionPublico\bin\Debug\ESRI.ArcGIS.Output.xml
+D:\jyupanqui\proyectos\AtencionPublico\AtencionPublico\AtencionPublico\obj\Debug\AtencionPublico.csprojResolveAssemblyReference.cache
 D:\jyupanqui\proyectos\AtencionPublico\AtencionPublico\AtencionPublico\obj\Debug\AtencionPublico.AtencionPublicodock.resources
 D:\jyupanqui\proyectos\AtencionPublico\AtencionPublico\AtencionPublico\obj\Debug\AtencionPublico.formPantallaGigante.resources
 D:\jyupanqui\proyectos\AtencionPublico\AtencionPublico\AtencionPublico\obj\Debug\AtencionPublico.Modulos.resources
@@ -53,4 +52,10 @@ D:\jyupanqui\proyectos\AtencionPublico\AtencionPublico\AtencionPublico\obj\Debug
 D:\jyupanqui\proyectos\AtencionPublico\AtencionPublico\AtencionPublico\obj\Debug\AtencionPublico.dll
 D:\jyupanqui\proyectos\AtencionPublico\AtencionPublico\AtencionPublico\obj\Debug\AtencionPublico.pdb
 D:\jyupanqui\proyectos\AtencionPublico\AtencionPublico\AtencionPublico\bin\Debug\AtencionPublico.tlb
+D:\jyupanqui\proyectos\AtencionPublico\AtencionPublico\AtencionPublico\bin\Debug\ESRI.ArcGIS.Display.dll
+D:\jyupanqui\proyectos\AtencionPublico\AtencionPublico\AtencionPublico\bin\Debug\ESRI.ArcGIS.Display.xml
+D:\jyupanqui\proyectos\AtencionPublico\AtencionPublico\AtencionPublico\bin\Debug\scripts\G_S02_obtenerdistritos.py
+D:\jyupanqui\proyectos\AtencionPublico\AtencionPublico\AtencionPublico\bin\Debug\scripts\G_S03_limpiarTOC.py
+D:\jyupanqui\proyectos\AtencionPublico\AtencionPublico\AtencionPublico\bin\Debug\scripts\PG_S01_graficarcarta.py
+D:\jyupanqui\proyectos\AtencionPublico\AtencionPublico\AtencionPublico\bin\Debug\scripts\G_S04_obtenerdatosdm.py
 D:\jyupanqui\proyectos\AtencionPublico\AtencionPublico\AtencionPublico\bin\Debug\AtencionPublico.esriAddIn

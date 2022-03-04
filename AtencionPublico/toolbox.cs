@@ -2,6 +2,7 @@
 using ESRI.ArcGIS.Geodatabase;
 using ESRI.ArcGIS.Geoprocessing;
 using ESRI.ArcGIS.GeoprocessingUI;
+using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -16,11 +17,19 @@ namespace AtencionPublico
     {
         //1. Variables globales
         //* _toolboxPath: Construye la ruta donde se encuentra el archivo *.tbx
+        private static List<object> parameters = new List<object>();
+        public static AtencionPublicoExceptions RuntimeError = new AtencionPublicoExceptions();
         public static string _toolboxPath_general = _path + @"\scripts\T00_generales.tbx";
         public static string _toolboxPath_PantallaGigante = _path + @"\scripts\T01_pantallaGigante.tbx";
 
         //:HERRAMIENTAS DEL MODULO GENERAL
         public static string _tool_getCartas = "getCartas";
+        public static string _tool_getDistritos = "getDistritos";
+        public static string _tool_clearToc = "clearToc";
+        public static string _tool_getDmValues = "getDmValues";
+
+        //:HERRAMIENTAS DEL MODULO PANTALLA GIANTE
+        public static string _tool_getCartasByParam = "getCartasByParam";
 
 
         // 5. Funciones globales de toolbox
@@ -58,6 +67,20 @@ namespace AtencionPublico
             {
                 MessageBox.Show(ex.Message);
             }
+        }
+
+        public static void CleanTableOfContents()
+        {
+            parameters.Clear();
+            var response = ExecuteGP(_tool_clearToc, parameters, _toolboxPath_general);
+            var responseJson = JsonConvert.DeserializeObject<Dictionary<string, object>>(response);
+            if (int.Parse(responseJson["status"].ToString()) == 0)
+            {
+                RuntimeError.PythonError = responseJson["message"].ToString();
+                MessageBox.Show(RuntimeError.PythonError, __title__, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            return;
         }
 
         //* ExecuteGP: Ejecuta una herramienta personalizada
