@@ -42,6 +42,10 @@ namespace AtencionPublico
         public static Dictionary<int, string> modulosDict = new Dictionary<int, string>();
         public static int controller_sesion = 0;
         public static string python_path;
+        public static int radio_consulta=1;
+        public static double puntoConsulta_x;
+        public static double puntoConsulta_y;
+
 
         //4. Variables globales dinámicas
         // su valor puede alterarse en todos los procesos

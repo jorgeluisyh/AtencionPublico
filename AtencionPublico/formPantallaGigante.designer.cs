@@ -782,6 +782,7 @@
             0,
             0,
             0});
+            this.nbx_radiokm.ValueChanged += new System.EventHandler(this.nbx_radiokm_ValueChanged);
             // 
             // formPantallaGigante
             // 
@@ -842,7 +843,6 @@
         private System.Windows.Forms.Button btn_graficar;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
         private System.Windows.Forms.Label lbl_radio;
-        private System.Windows.Forms.NumericUpDown nbx_radiokm;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
@@ -866,5 +866,6 @@
         private System.Windows.Forms.Label lbl_dm_zona;
         private System.Windows.Forms.Label lbl_dm_4;
         private System.Windows.Forms.Button btn_buscar_dm;
+        public System.Windows.Forms.NumericUpDown nbx_radiokm;
     }
 }

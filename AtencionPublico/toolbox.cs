@@ -30,6 +30,7 @@ namespace AtencionPublico
 
         //:HERRAMIENTAS DEL MODULO PANTALLA GIANTE
         public static string _tool_getCartasByParam = "getCartasByParam";
+        public static string _tool_graficarCapas = "graficarCapas";
 
 
         // 5. Funciones globales de toolbox
@@ -69,9 +70,11 @@ namespace AtencionPublico
             }
         }
 
-        public static void CleanTableOfContents()
+        public static void CleanTableOfContents(string capaname = null)
         {
             parameters.Clear();
+            if(capaname != null)
+                parameters.Add(capaname);
             var response = ExecuteGP(_tool_clearToc, parameters, _toolboxPath_general);
             var responseJson = JsonConvert.DeserializeObject<Dictionary<string, object>>(response);
             if (int.Parse(responseJson["status"].ToString()) == 0)

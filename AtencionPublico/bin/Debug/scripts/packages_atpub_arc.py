@@ -53,3 +53,8 @@ def get_cartas_by_dm(dm,distance):
 def get_cartas_by_coord(x,y,wkid,distance):
     return """select a.cd_hoja from data_gis.gpo_hoj_hojas_18 a 
     where sde.st_intersects(a.shape, sde.st_buffer(sde.st_geometry({x},{y},null,null,327{w}),{d}))=1""".format(x=x,y=y,w=wkid,d=distance)
+
+@arcPackageDecore
+def get_zona_by_coord(x,y,wkid):
+    return """select a.zona from DATA_GIS.GPO_ZUT_ZONAS_UTM a 
+    where sde.st_intersects(a.shape, sde.st_geometry({x},{y},null,null,{w}))=1""".format(x=x,y=y,w=wkid)

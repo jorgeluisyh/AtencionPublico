@@ -14,11 +14,14 @@ __status__ = 'Production'
 _BASE_DIR = os.path.dirname(__file__)
 _REQUIREMENTS_DIR = os.path.join(_BASE_DIR, 'require')
 
+_LYRS_DIR = os.path.join(_BASE_DIR, 'layers')
+
 _IMG_DIR = os.path.join(_BASE_DIR, 'img')
 _IMG_LOGO_INGEMMET = os.path.join(_IMG_DIR, 'logo_ingemmet.png')
 
 _BDGEOCAT_NAME = 'bdgeocat_dev.sde' if __status__ == 'Development' else 'bdgeocat.sde'
 _BDGEOCAT_SDE = os.path.join(_BASE_DIR, _BDGEOCAT_NAME)
+_BASE_GDB = os.path.join(_BASE_DIR, 'base.gdb')
 # _BDGEOCAT_SDE_DEV = os.path.join(_BASE_DIR, 'bdgeocat_dev.sde')
 #Capas de BDGEOCAT
 _CARTA_NACIONAL_GEOWGS84 = os.path.join(_BDGEOCAT_SDE, 'DATA_GIS.DS_IGN_CARTA_NACIONAL_GEOWGS84')

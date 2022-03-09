@@ -145,6 +145,12 @@
   <ItemGroup>
     <Compile Include="btnAbout.cs" />
     <Compile Include="ClsConexionBD.cs" />
+    <Compile Include="confirmarArea.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="confirmarArea.Designer.cs">
+      <DependentUpon>confirmarArea.cs</DependentUpon>
+    </Compile>
     <Compile Include="exceptions.cs" />
     <Compile Include="formPantallaGigante.cs">
       <SubType>Form</SubType>
@@ -223,13 +229,15 @@
     </Content>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="scripts\layers\" />
     <Folder Include="scripts\mxd\" />
     <Folder Include="scripts\require\" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="AtencionPublicodock.resx">
       <DependentUpon>AtencionPublicodock.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="confirmarArea.resx">
+      <DependentUpon>confirmarArea.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="formPantallaGigante.resx">
       <DependentUpon>formPantallaGigante.cs</DependentUpon>
@@ -248,6 +256,315 @@
     <None Include="scripts\atencionpublico.db">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
+    <None Include="scripts\base.gdb\a00000001.freelist">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="scripts\base.gdb\a00000001.gdbindexes">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="scripts\base.gdb\a00000001.gdbtable">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="scripts\base.gdb\a00000001.gdbtablx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="scripts\base.gdb\a00000001.TablesByName.atx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="scripts\base.gdb\a00000002.gdbtable">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="scripts\base.gdb\a00000002.gdbtablx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="scripts\base.gdb\a00000003.gdbindexes">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="scripts\base.gdb\a00000003.gdbtable">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="scripts\base.gdb\a00000003.gdbtablx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="scripts\base.gdb\a00000004.CatItemsByPhysicalName.atx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="scripts\base.gdb\a00000004.CatItemsByType.atx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="scripts\base.gdb\a00000004.FDO_UUID.atx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="scripts\base.gdb\a00000004.freelist">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="scripts\base.gdb\a00000004.gdbindexes">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="scripts\base.gdb\a00000004.gdbtable">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="scripts\base.gdb\a00000004.gdbtablx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="scripts\base.gdb\a00000004.spx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="scripts\base.gdb\a00000005.CatItemTypesByName.atx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="scripts\base.gdb\a00000005.CatItemTypesByParentTypeID.atx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="scripts\base.gdb\a00000005.CatItemTypesByUUID.atx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="scripts\base.gdb\a00000005.gdbindexes">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="scripts\base.gdb\a00000005.gdbtable">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="scripts\base.gdb\a00000005.gdbtablx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="scripts\base.gdb\a00000006.CatRelsByDestinationID.atx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="scripts\base.gdb\a00000006.CatRelsByOriginID.atx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="scripts\base.gdb\a00000006.CatRelsByType.atx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="scripts\base.gdb\a00000006.FDO_UUID.atx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="scripts\base.gdb\a00000006.freelist">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="scripts\base.gdb\a00000006.gdbindexes">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="scripts\base.gdb\a00000006.gdbtable">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="scripts\base.gdb\a00000006.gdbtablx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="scripts\base.gdb\a00000007.CatRelTypesByBackwardLabel.atx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="scripts\base.gdb\a00000007.CatRelTypesByDestItemTypeID.atx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="scripts\base.gdb\a00000007.CatRelTypesByForwardLabel.atx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="scripts\base.gdb\a00000007.CatRelTypesByName.atx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="scripts\base.gdb\a00000007.CatRelTypesByOriginItemTypeID.atx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="scripts\base.gdb\a00000007.CatRelTypesByUUID.atx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="scripts\base.gdb\a00000007.gdbindexes">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="scripts\base.gdb\a00000007.gdbtable">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="scripts\base.gdb\a00000007.gdbtablx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="scripts\base.gdb\a00000009.gdbindexes">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="scripts\base.gdb\a00000009.gdbtable">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="scripts\base.gdb\a00000009.gdbtablx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="scripts\base.gdb\a00000009.spx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="scripts\base.gdb\a0000000a.gdbindexes">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="scripts\base.gdb\a0000000a.gdbtable">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="scripts\base.gdb\a0000000a.gdbtablx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="scripts\base.gdb\a0000000a.spx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="scripts\base.gdb\a0000000b.gdbindexes">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="scripts\base.gdb\a0000000b.gdbtable">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="scripts\base.gdb\a0000000b.gdbtablx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="scripts\base.gdb\a0000000b.spx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="scripts\base.gdb\a0000000c.gdbindexes">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="scripts\base.gdb\a0000000c.gdbtable">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="scripts\base.gdb\a0000000c.gdbtablx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="scripts\base.gdb\a0000000c.spx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="scripts\base.gdb\a0000000f.gdbindexes">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="scripts\base.gdb\a0000000f.gdbtable">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="scripts\base.gdb\a0000000f.gdbtablx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="scripts\base.gdb\a0000000f.spx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="scripts\base.gdb\a00000010.gdbindexes">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="scripts\base.gdb\a00000010.gdbtable">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="scripts\base.gdb\a00000010.gdbtablx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="scripts\base.gdb\a00000010.spx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="scripts\base.gdb\a00000011.gdbindexes">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="scripts\base.gdb\a00000011.gdbtable">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="scripts\base.gdb\a00000011.gdbtablx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="scripts\base.gdb\a00000011.spx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="scripts\base.gdb\a00000012.gdbindexes">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="scripts\base.gdb\a00000012.gdbtable">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="scripts\base.gdb\a00000012.gdbtablx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="scripts\base.gdb\a00000012.spx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="scripts\base.gdb\a00000013.gdbindexes">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="scripts\base.gdb\a00000013.gdbtable">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="scripts\base.gdb\a00000013.gdbtablx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="scripts\base.gdb\a00000013.spx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="scripts\base.gdb\a00000014.gdbindexes">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="scripts\base.gdb\a00000014.gdbtable">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="scripts\base.gdb\a00000014.gdbtablx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="scripts\base.gdb\a00000014.spx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="scripts\base.gdb\a00000015.gdbindexes">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="scripts\base.gdb\a00000015.gdbtable">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="scripts\base.gdb\a00000015.gdbtablx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="scripts\base.gdb\a00000015.spx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="scripts\base.gdb\a00000016.gdbindexes">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="scripts\base.gdb\a00000016.gdbtable">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="scripts\base.gdb\a00000016.gdbtablx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="scripts\base.gdb\a00000016.spx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="scripts\base.gdb\a00000017.gdbindexes">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="scripts\base.gdb\a00000017.gdbtable">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="scripts\base.gdb\a00000017.gdbtablx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="scripts\base.gdb\a00000017.spx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="scripts\base.gdb\a00000018.gdbindexes">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="scripts\base.gdb\a00000018.gdbtable">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="scripts\base.gdb\a00000018.gdbtablx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="scripts\base.gdb\a00000018.spx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="scripts\base.gdb\a00000019.gdbindexes">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="scripts\base.gdb\a00000019.gdbtable">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="scripts\base.gdb\a00000019.gdbtablx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="scripts\base.gdb\a00000019.spx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="scripts\base.gdb\gdb">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="scripts\base.gdb\timestamps">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
     <None Include="scripts\bdgeocat.sde">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
@@ -263,13 +580,34 @@
     <None Include="scripts\G_S04_obtenerdatosdm.py">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
+    <None Include="scripts\layers\Area_consulta.lyr">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="scripts\layers\Area_Reserva.lyr">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="scripts\layers\atpub_catastro_17.lyr">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="scripts\layers\atpub_catastro_18.lyr">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="scripts\layers\atpub_catastro_19.lyr">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="scripts\layers\Distrito.lyr">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="scripts\layers\Zona_Urbana.lyr">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
     <None Include="scripts\packages_atpub_arc.py">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Include="scripts\PG_S01.py">
+    <None Include="scripts\PG_S01_graficarcarta.py">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Include="scripts\PG_S01_graficarcarta.py">
+    <None Include="scripts\PG_S02_graficar_capas.py">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
     <None Include="scripts\settings_atpub.py">

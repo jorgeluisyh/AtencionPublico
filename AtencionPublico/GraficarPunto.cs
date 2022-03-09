@@ -9,6 +9,7 @@ using ESRI.ArcGIS.Carto;
 using ESRI.ArcGIS.Display;
 using System.Drawing;
 using ESRI.ArcGIS.Desktop.AddIns;
+using static AtencionPublico.settings;
 
 namespace AtencionPublico
 {
@@ -30,18 +31,24 @@ namespace AtencionPublico
             IGraphicsContainer graphicsContainer = pMxDoc.FocusMap as IGraphicsContainer;
             graphicsContainer.DeleteAllElements();
 
+
+            IActiveView activeView = pMxDoc.ActiveView;
+            activeView.Refresh();
+            IScreenDisplay screenDisplay = activeView.ScreenDisplay;
+            screenDisplay.StartDrawing(screenDisplay.hDC, (short)esriScreenCache.esriNoScreenCache);
+
+
             IPoint a = new ESRI.ArcGIS.Geometry.Point();
             IPoint b = new ESRI.ArcGIS.Geometry.Point();
 
             IPoint pPoint = pMxDoc.ActiveView.ScreenDisplay.DisplayTransformation.ToMapPoint(args.Location.X, args.Location.Y) as IPoint;
-            a.PutCoords(pPoint.X + 1/111.11, pPoint.Y + 1/111.11);
-            b.PutCoords(pPoint.X - 1/111.11, pPoint.Y + 1/111.11);
+            //a.PutCoords(pPoint.X + 1/111.11, pPoint.Y + 1/111.11);
+            //b.PutCoords(pPoint.X - 1/111.11, pPoint.Y + 1/111.11);
             //MessageBox.Show("Map X: " + pPoint.X + System.Environment.NewLine + "Map Y: " + pPoint.Y);
+            puntoConsulta_x = pPoint.X;
+            puntoConsulta_y = pPoint.Y;
 
-            IActiveView activeView = pMxDoc.ActiveView;
-            IScreenDisplay screenDisplay = activeView.ScreenDisplay;
 
-            screenDisplay.StartDrawing(screenDisplay.hDC, (short)esriScreenCache.esriNoScreenCache);
 
 
             IRgbColor rgbColor = new RgbColorClass() as IRgbColor;
@@ -70,7 +77,7 @@ namespace AtencionPublico
 
             ICircularArc circleElement = new CircularArc();
             IConstructCircularArc constructionCircularArc = circleElement as IConstructCircularArc;
-            constructionCircularArc.ConstructCircle(pPoint, 8 / 111.11, true);
+            constructionCircularArc.ConstructCircle(pPoint, radio_consulta / 111.11, true);
 
 
             object missing = Type.Missing;
@@ -101,8 +108,8 @@ namespace AtencionPublico
             graphicsContainer.AddElement(element, 0);
             screenDisplay.FinishDrawing();
 
-
-
+            frm_confirmarArea frm = new frm_confirmarArea();
+            frm.ShowDialog();
 
 
 

@@ -11,9 +11,9 @@ response = dict()
 response['status'] = 1
 response['message'] = 'success'
 
-# param = arcpy.GetParameterAsText(0)
+param = arcpy.GetParameterAsText(0)
 
-def clearToc():
+def clearToc(capaname=""):
     """
     Limpiamos la tabla de contenidos del mxd actual
     """
@@ -21,14 +21,15 @@ def clearToc():
     dataframe = arcpy.mapping.ListDataFrames(mxd)[0]
     layers = arcpy.mapping.ListLayers(mxd)
     for lyr in layers:
-        arcpy.mapping.RemoveLayer(dataframe, lyr)
+        if lyr.name != capaname:
+            arcpy.mapping.RemoveLayer(dataframe, lyr)
     return 1
 
     
 
 
 try:
-    respuesta = clearToc()
+    respuesta = clearToc(param)
     response["response"] = respuesta
     # arcpy.AddMessage("Hello World!")
 except Exception as e:
@@ -37,4 +38,4 @@ except Exception as e:
     # response['message'] =traceback.format_exc()
 finally:
     response = json.dumps(response, encoding='windows-1252', ensure_ascii=False)
-    arcpy.SetParameterAsText(0, response)
+    arcpy.SetParameterAsText(1, response)

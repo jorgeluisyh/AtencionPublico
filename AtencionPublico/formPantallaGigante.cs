@@ -153,6 +153,7 @@ namespace AtencionPublico
             cbx_carta.SelectedIndexChanged -= cbx_carta_SelectedIndexChanged;
 
             parametros.Clear();
+            runProgressBar();
             var response = ExecuteGP(_tool_getCartas, parametros, _toolboxPath_general);
             var responseJson = JsonConvert.DeserializeObject<Dictionary<string, object>>(response);
             if (int.Parse(responseJson["status"].ToString()) == 0)
@@ -192,6 +193,7 @@ namespace AtencionPublico
 
             cbx_carta.SelectedIndexChanged += cbx_carta_SelectedIndexChanged;
             Cursor.Current = Cursors.Default;
+            runProgressBar("ini");
         }
 
         private void cargarDiccionarioDistrito()
@@ -201,6 +203,7 @@ namespace AtencionPublico
             cbx_distrito.SelectedIndexChanged -= cbx_distrito_SelectedIndexChanged;
 
             parametros.Clear();
+            runProgressBar();
             var response = ExecuteGP(_tool_getDistritos, parametros, _toolboxPath_general);
             var responseJson = JsonConvert.DeserializeObject<Dictionary<string, object>>(response);
             if (int.Parse(responseJson["status"].ToString()) == 0)
@@ -240,10 +243,12 @@ namespace AtencionPublico
 
             cbx_distrito.SelectedIndexChanged += cbx_distrito_SelectedIndexChanged;
             Cursor.Current = Cursors.Default;
+            runProgressBar("ini");
         }
 
         private void graficarCartaNacional(string parametro, string valor, string distancia)
         {
+            runProgressBar();
             parametros.Clear();
             parametros.Add(parametro);
             parametros.Add(valor);
@@ -254,8 +259,10 @@ namespace AtencionPublico
             {
                 RuntimeError.PythonError = responseJson["message"].ToString();
                 MessageBox.Show(RuntimeError.PythonError, __title__, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                runProgressBar("ini");
                 return;
             }
+            runProgressBar("ini");
             return;
         }
 
@@ -364,7 +371,7 @@ namespace AtencionPublico
         private void btn_buscar_dm_Click(object sender, EventArgs e)
         {
             Cursor.Current = Cursors.WaitCursor;
-
+            runProgressBar();
             parametros.Clear();
             parametros.Add(tbx_codigodm.Text);
             var response = ExecuteGP(_tool_getDmValues, parametros, _toolboxPath_general);
@@ -392,7 +399,8 @@ namespace AtencionPublico
                 VisualizarDatosDM(true);
 
             }
-            
+            runProgressBar("ini");
+
         }
 
         private void tbx_codigodm_KeyDown(object sender, KeyEventArgs e)
@@ -401,6 +409,11 @@ namespace AtencionPublico
             {
                 btn_buscar_dm_Click(this,EventArgs.Empty);
             }
+        }
+
+        private void nbx_radiokm_ValueChanged(object sender, EventArgs e)
+        {
+            radio_consulta = (int)nbx_radiokm.Value;
         }
     }
 }

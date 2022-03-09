@@ -34,6 +34,7 @@ namespace AtencionPublico
             cbx_modulos.DataSource = new BindingSource(modulosDict, null);
             cbx_modulos.DisplayMember = "Value";
             cbx_modulos.ValueMember = "Key";
+            _LOADER_CONTROL = pgb_modulos;
         }
 
 

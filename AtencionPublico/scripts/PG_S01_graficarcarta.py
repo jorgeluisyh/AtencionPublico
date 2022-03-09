@@ -24,7 +24,7 @@ def graficar(listacartas):
     """
     lista_cartas = list(map(lambda x: x[0].lower()+".ecw", listacartas))
     query = "Name IN ('{}')".format("','".join(lista_cartas))
-    lyr =arcpy.MakeRasterCatalogLayer_management(st._CARTA_NACIONAL_GEOWGS84,'cartita',query).getOutput(0)
+    lyr =arcpy.MakeRasterCatalogLayer_management(st._CARTA_NACIONAL_GEOWGS84,'Carta',query).getOutput(0)
 
     mxd = arcpy.mapping.MapDocument('current') # using current map, can also use a path to a mxd here
     df = arcpy.mapping.ListDataFrames(mxd)[0]
