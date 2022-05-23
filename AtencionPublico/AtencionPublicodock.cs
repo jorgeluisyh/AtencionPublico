@@ -60,8 +60,9 @@ namespace AtencionPublico
 
         private void AtencionPublicodock_Load(object sender, EventArgs e)
         {
-            ClsConexionBD conexionBD = new ClsConexionBD();
-            modulosDict = conexionBD.ObtenerModulossqlite();
+            //ClsConexionBD conexionBD = new ClsConexionBD();
+            //modulosDict = conexionBD.ObtenerModulossqlite();
+            modulosDict.Add(1, "Pantalla Gigante");
             Form Modulosform = new Modulos();
             openFormByName(Modulosform, pnl_main);
 

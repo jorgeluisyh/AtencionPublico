@@ -1,0 +1,8 @@
+AtencionPublico/bin
+AtencionPublico/obj
+*.user
+*.suo
+_ReSharper.*
+*.sln.cache
+*.pyc
+.idea
