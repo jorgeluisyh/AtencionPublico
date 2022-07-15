@@ -10,6 +10,7 @@ import settings_atpub as st
 import packages_atpub_arc as pa
 import traceback
 import uuid
+import math
 
 response = dict()
 response['status'] = 1
@@ -131,7 +132,7 @@ def cargar_registros_a_capas(zona, capa_influencia):
 
 def agregar_layers_a_mapa(zona):
     mxd = arcpy.mapping.MapDocument("CURRENT")
-    df = arcpy.mapping.ListDataFrames(mxd, "Layers")[0]
+    df = arcpy.mapping.ListDataFrames(mxd)[0]
     lyr_area_consulta = arcpy.mapping.Layer(os.path.join(st._LAYERS_DIR, "Area_consulta.lyr"))
     lyr_Distrito = arcpy.mapping.Layer(os.path.join(st._LAYERS_DIR, "Distrito.lyr"))
     lyr_Zona_Urbana = arcpy.mapping.Layer(os.path.join(st._LAYERS_DIR, "Zona_Urbana.lyr"))
@@ -157,7 +158,7 @@ def agregar_layers_a_mapa(zona):
     mxd_lyr_Area_consulta.replaceDataSource(scratch, "FILEGDB_WORKSPACE", "{}_{}_{}".format(_fc_areaconsulta, zona, uuid_sufix))
 
     df.extent = mxd_lyr_Area_consulta.getSelectedExtent()
-    df.scale = int(df.scale/10000)*10000*1.1
+    df.scale = int(math.ceil(df.scale/10000.0))*10000*1.1
     arcpy.RefreshActiveView()
 
 
@@ -176,7 +177,6 @@ def main():
 try:
     # Insertar procesos 
     response["response"]="response"
-    arcpy.AddMessage("Hello World!")
     main()
 except Exception as e:
     response['status'] = 0
