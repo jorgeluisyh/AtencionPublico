@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.tlp_modulos_controles = new System.Windows.Forms.TableLayoutPanel();
             this.lbl_modulos = new System.Windows.Forms.Label();
@@ -35,9 +36,12 @@
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.pgb_modulos = new System.Windows.Forms.ProgressBar();
             this.pnl_modulos_form = new System.Windows.Forms.Panel();
+            this.pbx_user_guide = new System.Windows.Forms.PictureBox();
+            this.ttp_modulos = new System.Windows.Forms.ToolTip(this.components);
             this.tableLayoutPanel1.SuspendLayout();
             this.tlp_modulos_controles.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbx_user_guide)).BeginInit();
             this.SuspendLayout();
             // 
             // tableLayoutPanel1
@@ -65,17 +69,18 @@
             // tlp_modulos_controles
             // 
             this.tlp_modulos_controles.ColumnCount = 2;
-            this.tlp_modulos_controles.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tlp_modulos_controles.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tlp_modulos_controles.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tlp_modulos_controles.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 26F));
             this.tlp_modulos_controles.Controls.Add(this.lbl_modulos, 0, 0);
             this.tlp_modulos_controles.Controls.Add(this.cbx_modulos, 0, 1);
+            this.tlp_modulos_controles.Controls.Add(this.pbx_user_guide, 1, 1);
             this.tlp_modulos_controles.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tlp_modulos_controles.Location = new System.Drawing.Point(10, 10);
             this.tlp_modulos_controles.Margin = new System.Windows.Forms.Padding(2);
             this.tlp_modulos_controles.Name = "tlp_modulos_controles";
             this.tlp_modulos_controles.RowCount = 2;
-            this.tlp_modulos_controles.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tlp_modulos_controles.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tlp_modulos_controles.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 16F));
+            this.tlp_modulos_controles.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tlp_modulos_controles.Size = new System.Drawing.Size(323, 41);
             this.tlp_modulos_controles.TabIndex = 2;
             // 
@@ -84,7 +89,7 @@
             this.lbl_modulos.AutoSize = true;
             this.tlp_modulos_controles.SetColumnSpan(this.lbl_modulos, 2);
             this.lbl_modulos.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.lbl_modulos.Location = new System.Drawing.Point(2, 7);
+            this.lbl_modulos.Location = new System.Drawing.Point(2, 3);
             this.lbl_modulos.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbl_modulos.Name = "lbl_modulos";
             this.lbl_modulos.Size = new System.Drawing.Size(319, 13);
@@ -93,15 +98,15 @@
             // 
             // cbx_modulos
             // 
-            this.tlp_modulos_controles.SetColumnSpan(this.cbx_modulos, 2);
             this.cbx_modulos.Dock = System.Windows.Forms.DockStyle.Fill;
             this.cbx_modulos.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbx_modulos.FormattingEnabled = true;
-            this.cbx_modulos.Location = new System.Drawing.Point(2, 22);
+            this.cbx_modulos.Location = new System.Drawing.Point(2, 18);
             this.cbx_modulos.Margin = new System.Windows.Forms.Padding(2);
             this.cbx_modulos.Name = "cbx_modulos";
-            this.cbx_modulos.Size = new System.Drawing.Size(319, 21);
+            this.cbx_modulos.Size = new System.Drawing.Size(293, 21);
             this.cbx_modulos.TabIndex = 1;
+            this.ttp_modulos.SetToolTip(this.cbx_modulos, "Escoger módulo");
             this.cbx_modulos.SelectedIndexChanged += new System.EventHandler(this.cbx_modulos_SelectedIndexChanged);
             // 
             // tableLayoutPanel2
@@ -140,6 +145,21 @@
             this.pnl_modulos_form.Size = new System.Drawing.Size(323, 472);
             this.pnl_modulos_form.TabIndex = 1;
             // 
+            // pbx_user_guide
+            // 
+            this.pbx_user_guide.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pbx_user_guide.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pbx_user_guide.Image = global::AtencionPublico.Properties.Resources.BookmarkDockWindow32;
+            this.pbx_user_guide.Location = new System.Drawing.Point(299, 18);
+            this.pbx_user_guide.Margin = new System.Windows.Forms.Padding(2);
+            this.pbx_user_guide.Name = "pbx_user_guide";
+            this.pbx_user_guide.Size = new System.Drawing.Size(22, 21);
+            this.pbx_user_guide.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbx_user_guide.TabIndex = 2;
+            this.pbx_user_guide.TabStop = false;
+            this.ttp_modulos.SetToolTip(this.pbx_user_guide, "Manual de usuario");
+            this.pbx_user_guide.Click += new System.EventHandler(this.pbx_user_guide_Click);
+            // 
             // Modulos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -158,6 +178,7 @@
             this.tlp_modulos_controles.ResumeLayout(false);
             this.tlp_modulos_controles.PerformLayout();
             this.tableLayoutPanel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pbx_user_guide)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -171,5 +192,7 @@
         private System.Windows.Forms.TableLayoutPanel tlp_modulos_controles;
         private System.Windows.Forms.Label lbl_modulos;
         private System.Windows.Forms.ComboBox cbx_modulos;
+        private System.Windows.Forms.PictureBox pbx_user_guide;
+        private System.Windows.Forms.ToolTip ttp_modulos;
     }
 }

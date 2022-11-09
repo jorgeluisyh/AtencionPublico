@@ -29,10 +29,12 @@ namespace AtencionPublico
         public static string _scripts_path = _path + @"\scripts";
         public static string _layer_path = _scripts_path + @"\layers";
         public static string _image_path = _scripts_path + @"\img";
+        public static string _doc_path = _scripts_path + @"\docs";
         public static string _path_sqlite = _scripts_path + @"\atencionpublico.db";
         public static string _path_loader = _image_path + @"\loader.gif";
 
         public static string _grillas_path = _image_path + @"\grilla_cartas.gif";
+        public static string _manual_path = _doc_path + @"\manual_pantalla_gigante.pdf";
 
         //3.Variables dinámicas alterables según fin
         // EStas variables solo podrán ser alteradas manejándolas dentro del contexto que fueron creados

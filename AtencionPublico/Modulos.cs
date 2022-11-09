@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Diagnostics;
 using static AtencionPublico.settings;
 
 namespace AtencionPublico
@@ -57,5 +58,16 @@ namespace AtencionPublico
             }
         }
 
+        private void pbx_user_guide_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                Process.Start(_manual_path);
+            }
+            catch
+            {
+                MessageBox.Show("Muy pronto estará disponible el manual de usuario para este módulo", __title__, MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+        }
     }
 }

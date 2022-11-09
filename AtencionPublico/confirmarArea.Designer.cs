@@ -96,6 +96,7 @@
             this.ClientSize = new System.Drawing.Size(250, 111);
             this.Controls.Add(this.tbl_panel);
             this.Name = "frm_confirmarArea";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Área de consulta";
             this.Load += new System.EventHandler(this.frm_confirmarArea_Load);
             this.tbl_panel.ResumeLayout(false);
